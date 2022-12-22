@@ -1,2 +1,19 @@
-+ Added: [Suggestion] /lands wild doesn't any longer teleport into caves
-- Fixed: Missing eco format
+This isn't a feature update. However, this update makes some necessary changes
+under the hood that are required to provide maintainability and automation in
+the feature.
+
+If you install this update and use some of my other plugins, make sure to update them as well.
+
+- Removed: API: Methods and classes from the API that were deprecated for years now.
++ Added: API: Disconnected API usage from actual implementation
+    While the old "way" is still supported, it's recommended that 3rd party developers update
+    in the future. If you have any plugin that uses this deprecated class or flags, you'll
+    get an info in your console.
+    Info: https://github.com/Angeschossen/LandsAPI/wiki#common-use-cases
+
++ Added: API: Seperated flag creation from implementation.
+    Info: https://github.com/Angeschossen/LandsAPI/wiki#common-use-cases
+
++ Improved: Configuration and documentation files are now automatically updated
+
+- Fixed: Missing radius argument in lang file
