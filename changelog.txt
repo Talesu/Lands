@@ -1,2 +1,1 @@
-- Fixed: Minor API issues
-- Fixed: Framework shading
+- Fixed: CachedRequirement modification for levels
