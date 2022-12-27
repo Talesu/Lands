@@ -1,1 +1,2 @@
-- Fixed: CachedRequirement modification for levels
++ Added: Send failure msg if no hologram provider isntalled at /lands admin hologram create
+- Fixed: Duplicated message at hologram creation
