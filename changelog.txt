@@ -1,2 +1,1 @@
-+ Added: Send failure msg if no hologram provider isntalled at /lands admin hologram create
-- Fixed: Duplicated message at hologram creation
++ Added: [#2225] [#2224] Backward compatability with older API versions at flag usage
