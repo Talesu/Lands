@@ -1,1 +1,1 @@
-+ Added: [#2230] [#2229] Backward compatability with flag state checks
+- Fixed: Snowman being able to make snow trail on claimed land
