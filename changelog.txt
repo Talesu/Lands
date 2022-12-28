@@ -1,1 +1,1 @@
-+ Added: [#2225] [#2224] Backward compatability with older API versions at flag usage
++ Added: [#2230] [#2229] Backward compatability with flag state checks
