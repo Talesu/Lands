@@ -472,6 +472,15 @@ events:
           1:
             condition: 'area_name != null'
             commands: [ ]
+  PlayerRandomTeleportEvent:
+    cancel: ''
+    commands:
+      condition: '!cancelled'
+      groups:
+        player_self:
+          1:
+            condition: ''
+            commands: [ ]
   WarDeclareEvent:
     cancel: ''
     commands:

@@ -1,1 +1,2 @@
-- Fixed: Snowman being able to make snow trail on claimed land
++ Added: API: PlayerRandomTeleportEvent: called whenever a player teleports via /lands wild
+- Fixed: [#2231] Being able to store tool in armor via 3rd party plugins in selection mode
