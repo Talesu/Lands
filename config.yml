@@ -528,6 +528,13 @@ upkeep:
   upkeep-reminder_time: 1h
 
 
+# Relations
+relations:
+  # If you disable this option, all existing relations will be deleted.
+  # NOTE: This setting requires server reload / restart.
+  enabled_6: true
+
+
 # Player settings
 player:
   flags:
