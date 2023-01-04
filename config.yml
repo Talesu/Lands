@@ -797,10 +797,12 @@ command:
   # They are not case-sensitive.
   blacklist:
     # This affects all players which are standing in a land, where they aren't trusted.
+    # Bypass permission: lands.bypass.cmd.untrusted
     nottrusted_list:
       - sethome
 
     # This affects all players, which are standing in a land.
+    # Bypass permission: lands.bypass.cmd.general
     general_list: [ ]
 
 # Lands menu settings (/lands menu)

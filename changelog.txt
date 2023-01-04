@@ -1,6 +1,3 @@
-+ Added: Option to disable relations
-    # Relations
-    relations:
-      # If you disable this option, all existing relations will be deleted.
-      # NOTE: This setting requires server reload / restart.
-      enabled_6: true
++ Added: [Suggestion] Don't spawn task for eco, if upkeep, taxes, nations upkeep are disabled
+- Fixed: [#2234] Error because of missing level requirement
+- Fixed: [#2239] Error at tab completion when edit land = null
