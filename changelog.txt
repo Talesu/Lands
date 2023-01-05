@@ -1,3 +1,12 @@
-+ Added: [Suggestion] Don't spawn task for eco, if upkeep, taxes, nations upkeep are disabled
-- Fixed: [#2234] Error because of missing level requirement
-- Fixed: [#2239] Error at tab completion when edit land = null
++ Added: [Suggestion] Additional war declaration requirements
+  # Set the minimum amount of chunks that a team needs to have, in order to declare war against an enemy.
+  min-chunks:
+    attacker_3: 0
+    defender_5: 0
+  # Set the minimum age of a team.
+  min-age:
+    attacker_4: 0s
+    defender_4: 0s
+
++ Added: Support for additional lore format (gui items)
+    lore: 'line1[newline]line2'

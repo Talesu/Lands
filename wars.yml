@@ -16,6 +16,21 @@ declaration:
     attacker: 0
     # Set minimum amount of trusted players for the defender to receive a war declaration.
     defender_3: 0
+  min-balance:
+    # Set the minimum land balance for attackers to be able to start a war.
+    attacker_2: 5000
+    # Set the minimum balance for defenders to have war declared against them directly.
+    # They can still be engaged in war, if they're part of a nation that has a balance higher than this.
+    defender_2: 0
+  # Set the minimum amount of chunks that a team needs to have, in order to declare war against an enemy.
+  min-chunks:
+    attacker_3: 0
+    defender_5: 0
+  # Set the minimum age of a team.
+  min-age:
+    attacker_4: 0s
+    defender_4: 0s
+
   # How much time do you want to give the defender lands for war preparation, before it will start?
   # NOTE: Timeunit is seconds
   # Default is one day
@@ -34,12 +49,6 @@ declaration:
     # Should the declaration be deleted if the enemy did not accept it during the configured period?
     # You can disable this by setting the value to 0.
     timeout: 5d
-  min-balance:
-    # Set the minimum land balance for attackers to be able to start a war.
-    attacker_2: 5000
-    # Set the minimum balance for defenders to have war declared against them directly.
-    # They can still be engaged in war, if they're part of a nation that has a balance higher than this.
-    defender_2: 0
 
 # Configure points
 points:
