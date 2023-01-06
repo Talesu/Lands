@@ -1,12 +1,3 @@
-+ Added: [Suggestion] Additional war declaration requirements
-  # Set the minimum amount of chunks that a team needs to have, in order to declare war against an enemy.
-  min-chunks:
-    attacker_3: 0
-    defender_5: 0
-  # Set the minimum age of a team.
-  min-age:
-    attacker_4: 0s
-    defender_4: 0s
-
-+ Added: Support for additional lore format (gui items)
-    lore: 'line1[newline]line2'
++ Added: Message: noaccess.area
++ Changed: Adjusted listener priority for command process event - cmi related
+- Fixed: [#2242] Prevent usage of spawn eggs by untrusted players
