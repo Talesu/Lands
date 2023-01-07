@@ -1,3 +1,2 @@
-+ Added: Message: noaccess.area
-+ Changed: Adjusted listener priority for command process event - cmi related
-- Fixed: [#2242] Prevent usage of spawn eggs by untrusted players
++ Added: [Suggestion] You can now limit the length of PlaceholderAPI placeholders by adding "length(number)" to the placeholder
+https://github.com/Angeschossen/Lands/wiki/PlaceholderAPI-Placeholders#limit-the-length-of-a-placeholder
