@@ -1,2 +1,2 @@
-+ Added: [Suggestion] You can now limit the length of PlaceholderAPI placeholders by adding "length(number)" to the placeholder
-https://github.com/Angeschossen/Lands/wiki/PlaceholderAPI-Placeholders#limit-the-length-of-a-placeholder
+- Fixed: Missing radius argument translation
+- Fixed: [#2241] Entity damage not being done at first explosion
