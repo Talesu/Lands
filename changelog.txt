@@ -1,2 +1,2 @@
-- Fixed: Missing radius argument translation
-- Fixed: [#2241] Entity damage not being done at first explosion
+- Fixed: [#2254] Event method deprecated
+- Fixed: [#2248] Using spawner eggs inside water could bypass protection
