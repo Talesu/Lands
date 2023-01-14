@@ -1,2 +1,4 @@
-- Fixed: [#2254] Event method deprecated
-- Fixed: [#2248] Using spawner eggs inside water could bypass protection
++ Added: [Suggestion] Allow toggeling of snowman trails. If the snow_melt flag is disabled, then snowmans won't
+create any trails
++ Added: [Suggestion] You can now define which channel permissions are set in LandsDiscordBot for land/nation owners and members
++ Changed: [Suggestion] Don't send auto claim chat message every few secs if message type isn't actionbar or title
