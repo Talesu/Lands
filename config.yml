@@ -150,7 +150,7 @@ land:
     # Claim a radius of chunks at land creation. These initial claims won't cost the land anything.
     # NOTE: 0 = only the chunk in which the player currently stands.
     # NOTE: This value can't be higher than your servers view distance.
-    claim-radius: 0
+    claim-radius: 1
 
   # Set the minimum distance in chunks (16 blocks) between different lands that do not belong to the same owner.
   # This prevents other landowners claiming directly at your land border.
@@ -160,6 +160,8 @@ land:
   force-near:
     enabled_2: true
     # Should claim attempts that would violate the force-near restrictions be treated as new lands?
+    # If disabled: Players can claim a limited amount of disconnected collections of claims. This amount is limited
+    # by the permission lands.locations.<number>.
     treat-as-new: true
   # Chunk claiming by placing a special claim block.
   # You can give claimblocks by executing the command /lands admin give <player> claimblock [amount]

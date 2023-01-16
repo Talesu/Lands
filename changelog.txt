@@ -1,4 +1,4 @@
-+ Added: [Suggestion] Allow toggeling of snowman trails. If the snow_melt flag is disabled, then snowmans won't
-create any trails
-+ Added: [Suggestion] You can now define which channel permissions are set in LandsDiscordBot for land/nation owners and members
-+ Changed: [Suggestion] Don't send auto claim chat message every few secs if message type isn't actionbar or title
++ Added: [Suggestion] Permission for land owners, to define the maximum amount of disconnected collections of claims
+    lands.locations.<number>
+    Example: lands.locations.10
+    Description: Set the max. amount of disconnected collections of claims for the players owned lands. This will only take effect, if the option treat-as-new is disabled in config.yml. This permission allows players to claim collections of chunks that are disconnected from the original land, but the force-near option will still be enforced once the maximum amount is reached.
