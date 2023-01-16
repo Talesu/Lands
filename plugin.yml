@@ -67,7 +67,7 @@ permissions:
         description: Set max camps
       lands.members.<number>:
         description: Set max members in a land
-      lands.locations.<number>:
+      lands.parts.<number>:
         description: 'Set the max. amount of disconnected collections of claims for the players owned lands. This will only take effect, if the option treat-as-new is disabled in config.yml. This permission allows players to claim collections of chunks that are disconnected from the original land, but the force-near option will still be enforced once the maximum amount is reached.'
       lands.selection.<number>:
         description: Set max chunks in selection (/lands selection). Default is 1000.

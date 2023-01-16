@@ -161,7 +161,7 @@ land:
     enabled_2: true
     # Should claim attempts that would violate the force-near restrictions be treated as new lands?
     # If disabled: Players can claim a limited amount of disconnected collections of claims. This amount is limited
-    # by the permission lands.locations.<number>.
+    # by the permission lands.parts.<number>.
     treat-as-new: true
   # Chunk claiming by placing a special claim block.
   # You can give claimblocks by executing the command /lands admin give <player> claimblock [amount]
