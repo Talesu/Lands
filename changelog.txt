@@ -1,4 +1,5 @@
-+ Added: [Suggestion] Permission for land owners, to define the maximum amount of disconnected collections of claims
-    lands.parts.<number>
-    Example: lands.parts.10
-    Description: Set the max. amount of disconnected collections of claims for the players owned lands. This will only take effect, if the option treat-as-new is disabled in config.yml. This permission allows players to claim collections of chunks that are disconnected from the original land, but the force-near option will still be enforced once the maximum amount is reached.
++ Added: [Suggestion] Combat tag is now being applied to both attacker and target, not just target
++ Changed: [#] Allow player to enter land if they have a combat tag (engaged with a player that is trusted in the land)
+- Fixed: [#2263] Not being able to release entites out of bucket
+- Fixed: [#2266] Missing argument translation
+- Fixed: [#2258] Banning player shouldn't require them to wait for teleportation

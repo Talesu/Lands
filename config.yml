@@ -337,7 +337,7 @@ land:
       # If a player attacks another player, they will by tagged for x (timeunit) so that, regardless of land settings,
       # other players can attack them.
       # 0s = disabled
-      tag_time: 0s
+      tag_time: 10s
       # Should a player be killed, if they log out while having a combat tag set on them?
       quit-kill: false
     # Should players, which are members in a common land, be able to fight in wilderness?
