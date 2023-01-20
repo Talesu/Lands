@@ -265,9 +265,11 @@ gui:
   list_area_invites:
     items:
       default:
-        entry_invite_area:
+        entry_object_trust_area:
           material: INHERIT
-        entry_invite_land:
+        entry_object_trust_land:
+          material: INHERIT
+        entry_object_owner:
           material: INHERIT
 
   list_area_roles:
@@ -497,7 +499,9 @@ gui:
   list_player_invites:
     items:
       default:
-        entry_object:
+        entry_object_trust:
+          material: INHERIT
+        entry_object_owner:
           material: INHERIT
 
   player_invite:
@@ -506,7 +510,10 @@ gui:
         info:
           material: OAK_SIGN
           slots: 23
-        accept:
+        accept_trust:
+          material: LIME_STAINED_GLASS_PANE
+          slots: 19-22
+        accept_owner:
           material: LIME_STAINED_GLASS_PANE
           slots: 19-22
         deny:

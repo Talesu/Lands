@@ -1,5 +1,1 @@
-+ Added: [Suggestion] Combat tag is now being applied to both attacker and target, not just target
-+ Changed: [#] Allow player to enter land if they have a combat tag (engaged with a player that is trusted in the land)
-- Fixed: [#2263] Not being able to release entites out of bucket
-- Fixed: [#2266] Missing argument translation
-- Fixed: [#2258] Banning player shouldn't require them to wait for teleportation
++ Added: [Suggestion] /lands setowner must now be accepted by the player via /lands accept or via their invites menu
