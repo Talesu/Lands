@@ -1,1 +1,10 @@
 + Added: [Suggestion] /lands setowner must now be accepted by the player via /lands accept or via their invites menu
++ Added: Option to toggle armor removal during selection mode
+      # Should a players armor be removed during selection mode (/lands selection)?
+      remove-armor: false
+
++ Added: Cooldown for owner change
+  # Set a owner change cooldown. Changing the owner of a land will also affect claim limits.
+  # To prevent abusal, you can enforce a cooldown. Owner changes through selling land,
+  # will affect this cooldown.
+  owner-cooldown_time: 7d

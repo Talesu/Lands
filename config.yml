@@ -65,6 +65,8 @@ general:
   first-join-items:
     # The selection tool allows them to claim.
     selection:
+      # Should a players armor be removed during selection mode (/lands selection)?
+      remove-armor: false
       slot_4: 1
       amount: 1
     # The info tool shows information about a claim when clicking on it.
@@ -276,12 +278,10 @@ land:
     # Timeunit: Seconds
     disable-delay: 3
 
-  # /lands setowner Settings
-  setowner:
-    # The land (or the land owner, if banks are disabled) will need to pay this amount in order to set a new owner.
-    # This prevents abusing of ownership transfers in order to bypass limitations.
-    costs_6: 5000.0
-
+  # Set a owner change cooldown. Changing the owner of a land will also affect claim limits.
+  # To prevent abusal, you can enforce a cooldown. Owner changes through selling land,
+  # will also affect this cooldown.
+  owner-cooldown_time: 7d
 
   # Delete inactive Lands, if the owner is offline since x days. This task executes every 6 hours.
   # NOTE: When changing any of these settings, it's recommended to take a backup of the database, in case you misconfigure anything accidentally.
