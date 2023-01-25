@@ -1,2 +1,2 @@
-- Fixed: [#2275] Combat tag not being removed correctly
-- Fixed: [#2277] Claim loading in combination with selection and map
++ Added: [Suggestion] Ignore invite owner etc. requirements for admin editors at /lands trust
+- Fixed: [#2277] Unclaim
