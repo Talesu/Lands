@@ -126,7 +126,7 @@ nametag: true
 cmd-blacklist_list: [ ]
 
 # Here you can enable natural flags during a war.
-# List of available land-flags: https://github.com/Angeschossen/Lands/wiki/Land-Flags
+# List of available natural-flags: https://github.com/Angeschossen/Lands/wiki/Natural-Flags
 land-flags_list: [ ]
 
 # Allow players doing the following things in the enemy land (only during war).
