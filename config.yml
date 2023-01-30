@@ -149,7 +149,8 @@ land:
     spaces: false
     # Should numbers be allowed in land and nation names?
     numbers: true
-    # Claim a radius of chunks at land creation. These initial claims won't cost the land anything.
+    # Claim a radius of chunks at land creation. These initial claims will be free.
+    # Example: radius 1 = 9 initial and free claims will be claimed upcon land creation.
     # NOTE: 0 = only the chunk in which the player currently stands.
     # NOTE: This value can't be higher than your servers view distance.
     claim-radius: 1
