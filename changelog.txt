@@ -1,2 +1,2 @@
-+ Added: [Suggestion] Ignore invite owner etc. requirements for admin editors at /lands trust
-- Fixed: [#2277] Unclaim
+- Fixed: [#2283] Land expiration with replace owner not taking max own lands into account
+- Fixed: [#2286] Merging two lands could result into the merged part disappearing
