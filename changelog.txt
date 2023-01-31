@@ -1,4 +1,1 @@
-+ Added: Combat tag API: https://github.com/Angeschossen/LandsAPI/blob/master/src/main/java/me.angeschossen.lands.api/player/combat/CombatTag.java
-- Fixed: [#2283] Land expiration with replace owner not taking max own lands into account
-- Fixed: [#2286] Merging two lands could result into the merged part disappearing
-- Fixed: [#2290] Dispenser spawn
+- Fixed: Being able to set combat tag on self
