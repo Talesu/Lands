@@ -1,1 +1,4 @@
-- Fixed: Being able to set combat tag on self
++ Added: Skip set owner cooldown if editor is server admin
++ Added: /lands menu close command: https://github.com/Angeschossen/PluginFrameworkAPI/wiki/GUI-Menus#close-menu
++ Added: /nations spawn <nation> command
+- Fixed: Wrong remainin setowner cooldown displayed at /l setowner
