@@ -1,2 +1,6 @@
-+ Added: API - LandBankDepositEvent, LandBankWithdrawEvent
++ Added: API - LandBankDepositEvent, LandBankWithdrawEvent, LandBankBalanceChangedEvent
+    also works in events.yml
 + Added: Remove balance as sorting option in lands and nations menu, if land.bank.enabled is set to false
++ Added: Option to disable luckperms context in case you don't need / want it:
+  # Being able to use Luckperms context: https://github.com/Angeschossen/Lands/wiki/Luckperms-Context
+  luckperms-context: true
