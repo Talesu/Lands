@@ -774,3 +774,20 @@ events:
           1:
             condition: ''
             commands: [ ]
+  LandBankBalanceChangedEvent:
+    cancel: ''
+    commands:
+      condition: '!cancelled'
+      groups:
+        player_self:
+          1:
+            condition: ''
+            commands: [ ]
+        land_trusted:
+          1:
+            condition: ''
+            commands: [ ]
+        land_online:
+          1:
+            condition: ''
+            commands: [ ]
