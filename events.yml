@@ -738,3 +738,39 @@ events:
           1:
             condition: ''
             commands: [ ]
+  # /lands deposit
+  LandBankDepositEvent:
+    cancel: ''
+    commands:
+      condition: '!cancelled'
+      groups:
+        player_self:
+          1:
+            condition: ''
+            commands: [ ]
+        land_trusted:
+          1:
+            condition: ''
+            commands: [ ]
+        land_online:
+          1:
+            condition: ''
+            commands: [ ]
+  # /lands withdraw
+  LandBankWithdrawEvent:
+    cancel: ''
+    commands:
+      condition: '!cancelled'
+      groups:
+        player_self:
+          1:
+            condition: ''
+            commands: [ ]
+        land_trusted:
+          1:
+            condition: ''
+            commands: [ ]
+        land_online:
+          1:
+            condition: ''
+            commands: [ ]
