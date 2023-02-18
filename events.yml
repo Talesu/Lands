@@ -472,15 +472,6 @@ events:
           1:
             condition: 'area_name != null'
             commands: [ ]
-  PlayerRandomTeleportEvent:
-    cancel: ''
-    commands:
-      condition: '!cancelled'
-      groups:
-        player_self:
-          1:
-            condition: ''
-            commands: [ ]
   WarDeclareEvent:
     cancel: ''
     commands:
@@ -722,59 +713,6 @@ events:
             condition: ''
             commands: [ ]
   LandConvertEvent:
-    cancel: ''
-    commands:
-      condition: '!cancelled'
-      groups:
-        player_self:
-          1:
-            condition: ''
-            commands: [ ]
-        land_trusted:
-          1:
-            condition: ''
-            commands: [ ]
-        land_online:
-          1:
-            condition: ''
-            commands: [ ]
-  # /lands deposit
-  LandBankDepositEvent:
-    cancel: ''
-    commands:
-      condition: '!cancelled'
-      groups:
-        player_self:
-          1:
-            condition: ''
-            commands: [ ]
-        land_trusted:
-          1:
-            condition: ''
-            commands: [ ]
-        land_online:
-          1:
-            condition: ''
-            commands: [ ]
-  # /lands withdraw
-  LandBankWithdrawEvent:
-    cancel: ''
-    commands:
-      condition: '!cancelled'
-      groups:
-        player_self:
-          1:
-            condition: ''
-            commands: [ ]
-        land_trusted:
-          1:
-            condition: ''
-            commands: [ ]
-        land_online:
-          1:
-            condition: ''
-            commands: [ ]
-  LandBankBalanceChangedEvent:
     cancel: ''
     commands:
       condition: '!cancelled'
