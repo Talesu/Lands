@@ -1,2 +1,3 @@
 - Fixed: WarDeclareEvent cancellation
-+ Added: API LandSpawnSet and remove event
++ Added: API LandSpawnSet and LandSpawnRemoveEvent
++ Added: API LandPlayer: getChatMode and setChatMode
