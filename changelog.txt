@@ -1,2 +1,2 @@
-+ Added: [Suggestion] /lands wild doesn't any longer teleport into caves
-- Fixed: Missing eco format
+- Fixed: WarDeclareEvent cancellation
++ Added: API LandSpawnSet and remove event
