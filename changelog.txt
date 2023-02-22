@@ -1,3 +1,1 @@
-- Fixed: Missing parameter translation: amount
-- Fixed: [#2286] Missing relations option in config
-+ Improved: [#2317] /lands wild speed and safe loc detection
++ Added: API Selection and selection.claim
