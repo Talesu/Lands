@@ -1,1 +1,4 @@
 + Added: API Selection and selection.claim
+- Fixed: Missing argument translations
+- Fixed: [#2294] Vault deposit response at bank withdraw
+- Fixed: [#2293] Ally sync for players
