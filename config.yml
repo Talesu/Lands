@@ -876,6 +876,9 @@ integration:
   # This option requires a server reload / restart.
   mythicmobs: false
 
+  # Should Lands provide Luckperms context for setting permissions?
+  luckperms-context: true
+
   # Economy settings
   # If all types are disabled, the item based economy will be used instead.
   # NOTE: When changing these option you might also want to adjust the "eco-format" in this config.

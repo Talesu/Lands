@@ -506,7 +506,10 @@ gui:
         info:
           material: OAK_SIGN
           slots: 23
-        accept:
+        accept_owner:
+          material: LIME_STAINED_GLASS_PANE
+          slots: 19-22
+        accept_trust:
           material: LIME_STAINED_GLASS_PANE
           slots: 19-22
         deny:

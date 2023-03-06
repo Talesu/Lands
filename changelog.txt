@@ -1,4 +1,3 @@
-+ Added: API Selection and selection.claim
-- Fixed: Missing argument translations
-- Fixed: [#2294] Vault deposit response at bank withdraw
-- Fixed: [#2293] Ally sync for players
++ Improved: [#2291] Protection for unsupported blocks from mods (hybrid servers)
+- Fixed: [#2298] Role color name comparison in /l admin land * resetflag
+- Fixed: Missing default slots for invite accept menu
