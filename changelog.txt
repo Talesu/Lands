@@ -1,3 +1,1 @@
-+ Improved: [#2291] Protection for unsupported blocks from mods (hybrid servers)
-- Fixed: [#2298] Role color name comparison in /l admin land * resetflag
-- Fixed: Missing default slots for invite accept menu
+- Fixed: [#2279] /l setowner cooldown
