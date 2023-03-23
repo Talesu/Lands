@@ -1,3 +1,2 @@
-- Fixed: Declaration timeout time missing in wars.yml
-- Fixed: Interaction with enchanting table
-- Fixed: Eating in claims you're not trusted in
+- Fixed: [#2279] /l setowner cooldown
+- Fixed: [#2283] Ally role flags for newly created lands
