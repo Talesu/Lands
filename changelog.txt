@@ -1,1 +1,3 @@
-- Fixed: [#2279] /l setowner cooldown
+- Fixed: Declaration timeout time missing in wars.yml
+- Fixed: Interaction with enchanting table
+- Fixed: Eating in claims you're not trusted in

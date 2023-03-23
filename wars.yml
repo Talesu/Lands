@@ -33,7 +33,7 @@ declaration:
     enabled_2: false
     # Should the declaration be deleted if the enemy did not accept it during the configured period?
     # You can disable this by setting the value to 0.
-    timeout: 5d
+    declaration-timeout: 5d
   min-balance:
     # Set the minimum land balance for attackers to be able to start a war.
     attacker_2: 5000
@@ -228,6 +228,7 @@ end:
 # Combat settings
 combat:
   # Pillage settings
+  # This affects the option "role-settings_list", "block-place_list" and "block-break_list".
   pillage:
     # Set a minimum amount of players of the defenders, which need to be online before the attackers can interact in the land.
     # This value is applied to the land that is currently being invaded. Not the whole team (collection of lands).
