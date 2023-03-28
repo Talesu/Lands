@@ -120,30 +120,6 @@ cmd-blacklist_list: [ ]
 # List of available land-flags: https://github.com/Angeschossen/Lands/wiki/Land-Flags
 land-flags_list: [ ]
 
-# Allow players doing the following things in the enemy land (only during war).
-# Available actions: https://github.com/Angeschossen/Lands/wiki/Roles-and-their-Flags#action-flags
-# NOTE: Adding BLOCK_PLACE or BLOCK_BREAK to this list will allow invaders to break, place ALL blocks. If you want to specify blocks, please use the lists below.
-# NOTE: In war the attackers and defenders also have the flags of the untrusted role of the area they're invading.
-role-settings_list:
-  - ITEM_PICKUP
-  - ATTACK_PLAYER
-  - LAND_ENTER
-
-# Allow the placement of specific blocks if the land part of a war.
-# NOTE: This is only needed if BLOCK_PLACE is NOT in the role-settings_list above.
-# Values: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html
-block-place_list:
-  - LADDER
-  - VINE
-  - SCAFFOLDING
-
-# Allow breaking of specific blocks if the land part of a war.
-# NOTE: This is only needed if BLOCK_BREAK is NOT in the role-settings_list above.
-# Values: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html
-block-break_list:
-  - LADDER
-  - VINE
-  - SCAFFOLDING
 
 # Cutomize what happens when a defender surrenders.
 surrender:
@@ -225,11 +201,13 @@ end:
   # If you have banks disabled, the money will be taken from the land owner.
   robbery: 75%
 
-# Combat settings
-combat:
-  # Pillage settings
-  # This affects the option "role-settings_list", "block-place_list" and "block-break_list".
-  pillage:
+
+# Invading means that the enemy is invading their opponent. Depending on the options "role-settings_list", "block-place_list" and "block-break_list"
+# they will be able to do certain actions in these lands, like opening chests.
+# If you want to limit what they're able to do, edit "role-settings_list", "block-place_list" and "block-break_list" in this section.
+invading:
+  # Limit when invading enemies are able to do certain actions (editable in the "flags" section below).
+  restrictions:
     # Set a minimum amount of players of the defenders, which need to be online before the attackers can interact in the land.
     # This value is applied to the land that is currently being invaded. Not the whole team (collection of lands).
     # NOTE: If you want to allow pillages WHILE no defender is online, set this option to 0.
@@ -237,3 +215,30 @@ combat:
     min-players: 1
     # Set a time period where players are still able to attack the land after the last player of the target land left the server.
     cooldown_logging_time: 1m
+
+  # Limit what invading enemies are able to do.
+  flags:
+    # Allow players doing the following things in the enemy land (only during war).
+    # Available actions: https://github.com/Angeschossen/Lands/wiki/Roles-and-their-Flags#action-flags
+    # NOTE: Adding BLOCK_PLACE or BLOCK_BREAK to this list will allow invaders to break, place ALL blocks. If you want to specify blocks, please use the lists below.
+    # NOTE: In war the attackers and defenders also have the flags of the untrusted role of the area they're invading.
+    role-flags_list:
+      - ITEM_PICKUP
+      - ATTACK_PLAYER
+      - LAND_ENTER
+
+    # Allow the placement of specific blocks if the land part of a war.
+    # NOTE: This is only needed if BLOCK_PLACE is NOT in the role-settings_list above.
+    # Values: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html
+    block-place_list:
+      - LADDER
+      - VINE
+      - SCAFFOLDING
+
+    # Allow breaking of specific blocks if the land part of a war.
+    # NOTE: This is only needed if BLOCK_BREAK is NOT in the role-settings_list above.
+    # Values: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html
+    block-break_list:
+      - LADDER
+      - VINE
+      - SCAFFOLDING
