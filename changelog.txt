@@ -5,6 +5,20 @@
 + Added: [Suggestion] %lands_land_icon% PlaceholderAPI placeholder
 + Added: [Suggestion] Bamboo is now covered by plant growth flag
 
++ Added: [Suggestion] Remind players that their chest isn't protected.
+By default this is enabled.
+
+# Introduce new players to claiming.
+introduction:
+  # Notify these players until they reached this playtime.
+  # 0 disabled this section completely.
+  max-playtime_time: 10m
+  # Reminders can be sent multiple times, but they have a cooldown to prevent spam and annoyance.
+  reminder:
+    # Send a warning that the placed container isn't protected when placing it in wilderness.
+    # Will only be sent if the player isn't part of any land already.
+    container-placement: true
+
 + Changed: [Suggestion] Since the old pillage/invading section in wars.yml was a bit confusing it has been restructured with
 better names and organized. You may need to re-configure this section if you want to change something.
 # Invading means that the enemy is invading their opponent. Depending on the options "role-settings_list", "block-place_list" and "block-break_list"

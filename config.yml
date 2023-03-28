@@ -605,6 +605,17 @@ random-teleport:
   extensive-check: false
 
 
+# Introduce new players to claiming.
+introduction:
+  # Notify these players until they reached this playtime.
+  # 0 disabled this section completely.
+  max-playtime_time: 10m
+  # Reminders can be sent multiple times, but they have a cooldown to prevent spam and annoyance.
+  reminder:
+    # Send a warning that the placed container isn't protected when placing it in wilderness.
+    # Will only be sent if the player isn't part of any land already.
+    container-placement: true
+
 # Sound configuration
 # Format: SOUND:VOLUME:PITCH
 # The volume and pitch parameter are optional. They allow you to control how the sound is played.
