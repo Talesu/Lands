@@ -409,6 +409,8 @@ chunk:
     # ADD: For example giving them just 10 dollars back.
     mode_2: 'PERCENTAGE'
     # Set this value to 0, if you want to disable this.
+    # If you use claimblocks (/lands admin player <player> give), this value just needs to be greater than 0 to give them
+    # each claimblock back at unclaim, if the chunk was claimed with an claimblock.
     value_2: 15
 
   # Chunk teleportation options
