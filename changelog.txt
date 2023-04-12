@@ -1,2 +1,5 @@
-+ Added: [Suggestion] Don't allow transferring of land ownership if players max chunks limit is too low for the land. Takes level and nation into account.
-+ Added: [Suggestion] Return none from translation file for %lands_land_role% if wilderness
++ Added: {uuid} placeholder to permission-plugin commands in config.yml
++ Added: [Suggestion] Max distance for nation members (lands) to the capital of the nation
+  # Set a maximum distance between the capital and the land that they want to invite to their nation.
+  # 0 disables this option.
+  max-distance: 0

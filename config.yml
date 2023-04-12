@@ -781,8 +781,9 @@ command:
   # This is needed for time rewards and the /lands admin give chunk <player> command
   permission-plugin:
     # Your permissions plugins command to add permissions.
-    # {player} will be replaced with the playername.
-    # {permission} will be replaced with the Lands permission.
+    # {player} The player's name
+    # {uuid} = The player's UUID
+    # {permission} = The Lands permission
     add: 'Luckperms user {player} permission set {permission}'
     # Your permission plugins command to remove permissions.
     remove: 'Luckperms user {player} permission unset {permission}'
