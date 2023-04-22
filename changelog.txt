@@ -1,5 +1,3 @@
-+ Added: {uuid} placeholder to permission-plugin commands in config.yml
-+ Added: [Suggestion] Max distance for nation members (lands) to the capital of the nation
-  # Set a maximum distance between the capital and the land that they want to invite to their nation.
-  # 0 disables this option.
-  max-distance: 0
+- Fixed: [#2314] Land params with spaces in menus
+- Fixed: [#2310] Fixed bed dupe items caused by event handler in bukkit
+- Fixed: Option in wars.yml: "invading.flags.role-flags"
