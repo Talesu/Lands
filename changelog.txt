@@ -1,3 +1,5 @@
-- Fixed: [#2314] Land params with spaces in menus
-- Fixed: [#2310] Fixed bed dupe items caused by event handler in bukkit
-- Fixed: Option in wars.yml: "invading.flags.role-flags"
++ Added: [#2317] Role flags are now sorted by the display list in roles.yml
+
+- Fixed: Wrong placeholders for war surrender
+- Fixed: /l trust admin bypass
+- Fixed: [#2319] Untrusted players being able to trigger respawn anchors

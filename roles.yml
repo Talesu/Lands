@@ -9,40 +9,41 @@
 land:
   # Which flags should be displayed in the role settings menu?
   # You can still set default values below and hide them by removing them from this list.
+  # The order of this list also defines their sorting in the menus.
   display:
     - BLOCK_PLACE
     - BLOCK_BREAK
+    - BLOCK_IGNITE
     - PLANT
     - HARVEST
+    - TRAMPLE_FARMLAND
     - SHEAR
-    - BLOCK_IGNITE
+    - ITEM_PICKUP
     - INTERACT_GENERAL
     - INTERACT_CONTAINER
     - INTERACT_DOOR
     - INTERACT_TRAPDOOR
     - INTERACT_MECHANISM
     - INTERACT_VILLAGER
+    - VEHICLE_USE
     - ATTACK_PLAYER
     - ATTACK_ANIMAL
     - ATTACK_MONSTER
+    - LAND_ENTER
     - FLY
     - ELYTRA
     - SPAWN_TELEPORT
     - ENDER_PEARL
-    - LAND_ENTER
-    - VEHICLE_USE
-    - ITEM_PICKUP
-    - TRAMPLE_FARMLAND
+    - PLAYER_TRUST
+    - PLAYER_SETROLE
+    - PLAYER_UNTRUST
+    - PLAYER_BAN
     - LAND_CLAIM
     - LAND_CLAIM_BORDER
     - SPAWN_SET
     - BALANCE_WITHDRAW
     - AREA_ASSIGN
     - WAR_MANAGE
-    - PLAYER_TRUST
-    - PLAYER_SETROLE
-    - PLAYER_UNTRUST
-    - PLAYER_BAN
     - SETTING_EDIT_LAND
     - SETTING_EDIT_ROLE
     - SETTING_EDIT_TAXES
