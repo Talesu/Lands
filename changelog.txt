@@ -1,5 +1,2 @@
-+ Added: [#2317] Role flags are now sorted by the display list in roles.yml
-
-- Fixed: Wrong placeholders for war surrender
-- Fixed: /l trust admin bypass
-- Fixed: [#2319] Untrusted players being able to trigger respawn anchors
++ Added: [#2317] Players from parent roles (add to new area) aren't added to new areas
+- Fixed: Not being able to teleport dragon eggs in claim
