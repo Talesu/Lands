@@ -85,6 +85,7 @@ general:
   # Info: https://docs.oracle.com/javase/7/docs/api/java/text/DecimalFormat.html
   # NOTE: This setting requires server reload / restart.
   eco-format:
+    # Recommended format for item economy and player experience: "# gold ingot(s)" or "# experience"
     normal: '$#,##0.00'
     # The short format will use the normal format if the value is lower than 1000.
     # If the value is higher or equal than 1000, it will return {value} divided by 1000.
@@ -819,7 +820,7 @@ command:
 # Lands menu settings (/lands menu)
 gui:
   # Should Lands automatically adjust the length of item lore lines?
-  # Recommended length would be 35.
+  # Recommended length is 35.
   # NOTE: Set this to 0 to disable it.
   max-lore-length: 0
   # Should the /lands list menu show only lands where to player can teleport to?

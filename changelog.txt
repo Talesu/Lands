@@ -1,2 +1,3 @@
-+ Added: [#2317] Players from parent roles (add to new area) aren't added to new areas
-- Fixed: Not being able to teleport dragon eggs in claim
+- Fixed: [#2322] hex color considered as text - max lore length option in config
+- Fixed: [#2323] Default eco format for items and exp
+- Fixed: [#2321] Bed respawn bypasses banned player status
