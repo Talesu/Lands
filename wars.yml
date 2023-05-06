@@ -40,6 +40,11 @@ declaration:
     # Set the minimum balance for defenders to have war declared against them directly.
     # They can still be engaged in war, if they're part of a nation that has a balance higher than this.
     defender_2: 0
+  min-age:
+    # Set the minimum age of a attacker.
+    attacker_3: 0d
+    # Set the minimum age of a defender.
+    defender_4: 0d
 
 # Configure points
 points:
