@@ -1,3 +1,2 @@
-- Fixed: [#2317] lands shouldn't have a category set by default
-- Fixed: [#2317] /l top balance placeholder
-- Fixed: [#2327] error at capturing area on paper
++ Added: [Suggestion] Capture capture flag if defenders all logout while being in the capture area
++ Changed: Don't allow throwing lingering potions in claim, if pvp disabled, even if no animal or player is near
