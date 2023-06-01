@@ -33,7 +33,7 @@ declaration:
     enabled_2: false
     # Should the declaration be deleted if the enemy did not accept it during the configured period?
     # You can disable this by setting the value to 0.
-    declaration-timeout: 5d
+    declaration-timeout_time: 5d
   min-balance:
     # Set the minimum land balance for attackers to be able to start a war.
     attacker_2: 5000
