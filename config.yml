@@ -163,7 +163,7 @@ land:
     # Should claim attempts that would violate the force-near restrictions be treated as new lands?
     treat-as-new: true
   # Chunk claiming by placing a special claim block.
-  # You can give claimblocks by executing the command /lands admin give <player> claimblock [amount]
+  # You can give claimblocks by executing the command /lands player <player> give claimblock [amount]
   # If you don't want your players to claim via command, just
   # don't give them lands.command.claim.
   # If you don't want your players to claim with claimblocks,
@@ -371,7 +371,7 @@ land:
 
 
 # Camps are temporary lands that will get deleted after a defined period.
-# Camp items can be given at first join or by executing /lands admin give
+# Camp items can be given at first join or by executing /lands player <player> give
 camp:
   # NOTE: This setting requires server reload / restart.
   enabled_21: true
@@ -381,7 +381,7 @@ camp:
   # 0 = never
   expire_time: 1d
   # Configure the default radius of chunks to claim.
-  # You can override this executing /lands admin give <player> camp <radius> [silent]
+  # You can override this executing /lands player <player> give camp <radius> [silent]
   # 0 = only the chunk in which the camp item is placed.
   radius: 1
   # Set the default camp name.
@@ -781,7 +781,7 @@ visualization:
 
 # Command settings
 command:
-  # This is needed for time rewards and the /lands admin give chunk <player> command
+  # This is needed for time rewards and the "/lands player <player> give permission chunk" command
   permission-plugin:
     # Your permissions plugins command to add permissions.
     # {player} The player's name
