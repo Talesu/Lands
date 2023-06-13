@@ -9,6 +9,8 @@
 # If you're looking for a plugin to regenerate chunks at unclaim or wilderness, it's recommended
 # to use the WildRegeneration plugin: https://polymart.org/resource/wildregeneration.2096
 
+# If enabled, Lands will disable advanced features, like wars, nations, upkeep and taxes.
+basic-mode: false
 
 # General options
 general:
