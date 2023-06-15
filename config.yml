@@ -56,6 +56,9 @@ general:
   claim-worlds_list:
     - 'world'
 
+  # Make it possible to create sub areas inside lands?
+  sub-areas: true
+
   # Edit the land you're standing in instead of the land from /lands edit?
   # For /lands claim you will still need to set the claim land with /lands edit.
   edit-by-loc: false
@@ -136,7 +139,7 @@ land:
     force: false
     # The cost to create a land (/lands create).
     # NOTE: This includes also one chunk claim, which will be claimed automatically on land creation.
-    costs: 4000.0
+    costs: 0.0
     # Maximum land name length
     # The maximum possible length is 80 when using MySQL and 32 when using SQLite (including color codes).
     # How to filter names: https://github.com/Angeschossen/General/wiki/Messages#filter-swear-words-and-forbidden-names
@@ -153,7 +156,7 @@ land:
     # Claim a radius of chunks at land creation. These initial claims won't cost the land anything.
     # NOTE: 0 = only the chunk in which the player currently stands.
     # NOTE: This value can't be higher than your servers view distance.
-    claim-radius: 0
+    claim-radius: 1
 
   # Set the minimum distance in chunks (16 blocks) between different lands that do not belong to the same owner.
   # This prevents other landowners claiming directly at your land border.
@@ -190,7 +193,7 @@ land:
         # Cost for first time set
         set: 0.0
         # Cost for changing spawn
-        change: 400.0
+        change: 0.0
 
     # Teleportation settings
     teleport:
@@ -259,7 +262,7 @@ land:
   # Command: /lands rename
   rename:
     # Costs to rename a land.
-    costs_5: 1000.0
+    costs_5: 0.0
     # Cooldown to rename the land.
     # Bypass permission: lands.bypass.cooldown.rename
     rename-cooldown_time: 15m
@@ -393,7 +396,7 @@ camp:
 chunk:
   # Cost to claim a chunk.
   # The first claim for a land will be always free.
-  costs_2: 1500.0
+  costs_2: 0.0
   # Increase cost per chunk claim.
   cost-increase:
     # Available modes:
@@ -423,7 +426,7 @@ chunk:
     # Command: /lands teleport or through the GUI menu.
     chunk-tp-cooldown_time: 3m
     # Cost for a teleportation.
-    costs_3: 15
+    costs_3: 0
 
   # Allow claiming only in the initial world, in which the land was created?
   # This means that a land can only have claims in one world.
@@ -601,7 +604,7 @@ random-teleport:
   # Command (/lands wild) cooldown
   rtp-cooldown_time: 10m
   # Teleportation cost
-  costs_4: 570.0
+  costs_4: 0.0
   # Extensive biome check: If your custom world generator or downloaded map does not have biome maps properly implemented, this option
   # will load the destination chunk before teleportation to check to biome. This will prevent players getting teleported into oceans, because the biome
   # map of your world generator or downloaded map is not registered at the server. Please note that this option will cost performance
