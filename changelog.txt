@@ -1,3 +1,1 @@
-+ Improved: 1.20 new entities support
-- Fixed: invalid command in comments in config.yml
-- Fixed: Error at startup for 1.16.5
++ Added: Don't register sub commands, if their features are disabled in config

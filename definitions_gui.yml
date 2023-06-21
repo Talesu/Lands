@@ -51,6 +51,12 @@ common:
       refresh_page_next:
         material: ARROW
         slots: 44
+      category:
+        material: BOOKSHELF
+        slots: 40
+      category_members:
+        material: BOOKSHELF
+        slots: 40
 
 gui:
   main:
@@ -80,7 +86,16 @@ gui:
         flags:
           material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWMyZmYyNDRkZmM5ZGQzYTJjZWY2MzExMmU3NTAyZGM2MzY3YjBkMDIxMzI5NTAzNDdiMmI0NzlhNzIzNjZkZCJ9fX0=
           slots: 32
-
+      patches:
+        basic:
+          lands:
+            slots: 20
+          all-lands:
+            slots: 22
+          flags:
+            slots: 24
+          limitation:
+            slots: 26
   list_player_lands:
     items:
       default:
@@ -176,12 +191,15 @@ gui:
       default:
         entry_object:
           material: INHERIT
-        category:
-          material: BOOKSHELF
-          slots: 40
         membership_accept:
           material: REDSTONE
           slots: 42
+      patches:
+        all:
+          category:
+            slots: 40
+          category_members:
+            slots: 40
 
   list_land_areas:
     items:
@@ -624,12 +642,15 @@ gui:
         title:
           material: OAK_SIGN
           slots: 22
-        category:
-          material: BOOKSHELF
-          slots: 24
         icon:
           material: INHERIT
           slots: 26
+      patches:
+        all:
+          category:
+            slots: 24
+          category_members:
+            slots: 24
 
   area_various:
     items:

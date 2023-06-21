@@ -5,20 +5,22 @@
 # have any changes take effect.
 
 land:
-  members:
-    name: '&eLooking for Members ☺'
-    description:
-      - '&7This land is actively searching'
-      - '&7for new members.'
-  shop:
-    name: '&cShop $'
-    description:
-      - '&7This land contains shops.'
-  pvp:
-    name: '&4PvP Arena ⚔'
-    description:
-      - '&7This land features a PvP arena.'
-  mobfarm:
-    name: '&9Mobfarm'
-    description:
-      - '&7This land features a mobfarm.'
+  enabled: true
+  categories:
+    members:
+      name: '&eLooking for Members ☺'
+      description:
+        - '&7This land is actively searching'
+        - '&7for new members.'
+    shop:
+      name: '&cShop $'
+      description:
+        - '&7This land contains shops.'
+    pvp:
+      name: '&4PvP Arena ⚔'
+      description:
+        - '&7This land features a PvP arena.'
+    mobfarm:
+      name: '&9Mobfarm'
+      description:
+        - '&7This land features a mobfarm.'
