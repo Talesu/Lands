@@ -18,42 +18,9 @@
 # NOTE: This setting requires server reload / restart.
 basic-mode: false
 
+
 # General options
 general:
-  # Default: English (en-US) - no download required.
-  # You can access translations maintained by the community in our Discord: https://discord.gg/B4MAJVk
-  # To access translations, other than en-US, execute /translations in the Discord server.
-  # The translation name should match the official language code (https://www.oracle.com/java/technologies/javase/jdk8-jre8-suported-locales.html).
-  # This option also affects the grouping and decimal separator for currency formatting.
-  language: 'en-US'
-  # Force default language? This will make changes to language files impossible and will always use the default.
-  # This will always replace existing strings with the default ones.
-  # You should only use this option if your language matches "en-US".
-  force-default: false
-  # If false, chat message parts that are enclosed by [V]text[/T] will only be sent to players
-  # that have the lands.admin.verbose permission. This setting only applies to chat messages.
-  verbose: true
-  # Date format
-  # MM: Month
-  # dd: Day of month
-  # yyyy: Year
-  # hh: hours
-  # mm: minutes
-  # ss: seconds
-  # NOTE: These settings require server reload / restart.
-  date-format:
-    # General format for invites etc.
-    # 24 hour format:
-    # MM/dd/yyyy HH:mm:ss
-    general: 'MM/dd/yyyy hh:mm'
-    # Format for news messages in the land menu (inbox).
-    inbox: 'MMMMM dd'
-    # Set the time zone for date text outputs.
-    # Example: America/Los_Angeles or GMT-8:00
-    # List of time zones: https://timezonedb.com/time-zones
-    # If empty, it uses the time zone of the machine your server is running on.
-    time-zone: ''
-
   # Worlds where players should be able to claim.
   # This list also supports setting an optional player claims height per world.
   # Example: world:30:319 -> this will configure the world 'world' with a claim height from 30 to 319 (max height since it starts at 0).
@@ -62,8 +29,12 @@ general:
   claim-worlds_list:
     - 'world'
 
-  # Make it possible to create sub areas inside lands?
-  sub-areas: true
+  # Default: English (en-US) - no download required.
+  # You can access translations maintained by the community in our Discord: https://discord.gg/B4MAJVk
+  # To access translations, other than en-US, execute /translations in the Discord server.
+  # The translation name should match the official language code (https://www.oracle.com/java/technologies/javase/jdk8-jre8-suported-locales.html).
+  # This option also affects the grouping and decimal separator for currency formatting.
+  language: 'en-US'
 
   # Edit the land you're standing in instead of the land from /lands edit?
   # For /lands claim you will still need to set the claim land with /lands edit.
@@ -91,6 +62,33 @@ general:
       slot_7: 4
       amount_4: 1
 
+  # Force default language? This will make changes to language files impossible and will always use the default.
+  # This will always replace existing strings with the default ones.
+  # You should only use this option if your language matches "en-US".
+  force-default: false
+  # If false, chat message parts that are enclosed by [V]text[/T] will only be sent to players
+  # that have the lands.admin.verbose permission. This setting only applies to chat messages.
+  verbose: true
+  # Date format
+  # MM: Month
+  # dd: Day of month
+  # yyyy: Year
+  # hh: hours
+  # mm: minutes
+  # ss: seconds
+  # NOTE: These settings require server reload / restart.
+  date-format:
+    # General format for invites etc.
+    # 24 hour format:
+    # MM/dd/yyyy HH:mm:ss
+    general: 'MM/dd/yyyy hh:mm'
+    # Format for news messages in the land menu (inbox).
+    inbox: 'MMMMM dd'
+    # Set the time zone for date text outputs.
+    # Example: America/Los_Angeles or GMT-8:00
+    # List of time zones: https://timezonedb.com/time-zones
+    # If empty, it uses the time zone of the machine your server is running on.
+    time-zone: ''
 
   # Set the format of all economy related displays.
   # Info: https://docs.oracle.com/javase/7/docs/api/java/text/DecimalFormat.html
@@ -135,7 +133,77 @@ general:
   upd-notify: false
 
 
-# Land settings
+# General options for economic tasks, that apply to taxes, upkeep and nation upkeep.
+# Each task has it's own section, in this file and nations.yml, with specified options.
+economic:
+  # Default configuration: taxes, upkeep and nation upkeep are collected every day at midnight.
+  interval:
+    # Collect taxes, upkeep and nation upkeep at midnight.
+    # Format: 24 hour format.
+    time: '24:00:00'
+    # Set amount of days between each payment.
+    # 1 doesn't have any effect. 2 would make it execute every second day at "time" (specified above).
+    # Example: 2 = executes every second day at the time specified at the top of this section.
+    days_2: 1
+    # Set the minimum time between a player's attempt to change the tax or upkeep and the next collection.
+    change-cooldown_time: 12h
+
+
+# Land upkeep costs
+# Upkeep = Lands pay a defined amount of money to the server in order to keep their claimed land.
+# Taxes = Trusted players pay a defined amount of tax per defined interval.
+upkeep:
+  # NOTE: This setting requires server reload / restart.
+  enabled_19: true
+  # How much should a land pay per chunk?
+  # NOTE: Final payment would be land size (chunks) * cost
+  per-chunk: 3.0
+  # Should the last claimed chunks, which the land could not pay for, be deleted?
+  # Example: The land has 10 claimed chunks, but it can pay the upkeep only for 6. So the 4 last claimed chunks will be deleted.
+  # This continues each upkeep cicle until no claims are left.
+  unclaim: false
+  # Exclude land from upkeep, if it was recently created?
+  # This will prevent recently created lands getting a chunk deleted, if the land owner / land bank doesn't have enough money (and if delete-chunk enabled).
+  # So only lands, which are older than x seconds, will need to pay this.
+  nopay_time: 2d
+  # Remind land members, which can deposit money into their lands, about upcoming upkeep payments until they have enough money to pay it.
+  # This helps your players lands keeping track of it and not loosing claims or their membership in the nation.
+  upkeep-reminder_time: 1h
+
+
+# Taxes settings
+# Taxes = Trusted players pay a defined amount of tax per defined interval.
+# Rent = The players can rent a area of their choice without needing to get trusted. They can decide how long they want to rent it.
+taxes:
+  # The interval can be configured in the "economic" section.
+  enabled_3: true
+  # Set the minimum tax value.
+  min_2: 0
+  # Set max tax value for a single area (if a land has no sub areas then this will be the default area)
+  max_3: 10.0
+  # Untrust a land member from the area if he couldn't pay the taxes?
+  untrust-member: true
+  # Announce upcoming tax payments to players.
+  # Default: Lands will sent a player every two hours a notice, if they don't have enough to pay their taxes.
+  # Disable: 0
+  taxes-announcement_time: 2h
+
+
+# General teleportation options.
+# Command specific teleportation options can be found in their sections.
+teleport:
+  # General teleportation cost. Some features might have specific options, which override this.
+  costs_9: 0
+  # Set the cost of any teleportation to 0 for players that joined the server for the first time.
+  # You can define a time span here. Example: 1d = players that joined the server 23 hours ago, won't pay for any teleportation.
+  first-join_time: 2h
+  # Waittime
+  # Timeunit: seconds
+  wait: 3
+
+
+# A land consists of a collection of chunks which are claimed via the /claim command or with the claim tool.
+# This section and the "chunk" section contain claiming options.
 land:
   # Land creation
   creation:
@@ -381,24 +449,7 @@ land:
     max-balance: 0
 
 
-# Camps are temporary lands that will get deleted after a defined period.
-# Camp items can be given at first join or by executing /lands player <player> give
-camp:
-  # NOTE: This setting requires server reload / restart.
-  enabled_21: true
-  # Set how much it should cost. This also includes the chunks that are being claimed.
-  costs_8: 0
-  # After how much time should camps be deleted?
-  # 0 = never
-  expire_time: 1d
-  # Configure the default radius of chunks to claim.
-  # You can override this executing /lands player <player> give camp <radius> [silent]
-  # 0 = only the chunk in which the camp item is placed.
-  radius: 1
-  # Set the default camp name.
-  default-name: '{player}''sCamp'
-
-
+# Each chunk represents an 16x16 blocks area.
 chunk:
   # Cost to claim a chunk.
   # The first claim for a land will be always free.
@@ -480,75 +531,41 @@ chunk:
       # This option requires server reload / restart.
       remove_3: false
 
-# Options for areas inside your land.
-area:
+
+# Players can create block-sized (not chunks) sub-areas inside their lands.
+sub-area:
+  # Make it possible to create sub areas, using /lands selection, inside lands?
+  enabled_22: true
   # Cooldown for the teleportation to an area inside your land.
   teleport-cooldown_time: 0s
 
 
+# Camps are temporary lands that will get deleted after a defined period.
+# Camp items can be given at first join or by executing /lands player <player> give
+camp:
+  # NOTE: This setting requires server reload / restart.
+  enabled_21: true
+  # Set how much it should cost. This also includes the chunks that are being claimed.
+  costs_8: 0
+  # After how much time should camps be deleted?
+  # 0 = never
+  expire_time: 1d
+  # Configure the default radius of chunks to claim.
+  # You can override this executing /lands player <player> give camp <radius> [silent]
+  # 0 = only the chunk in which the camp item is placed.
+  radius: 1
+  # Set the default camp name.
+  default-name: '{player}''sCamp'
+
+
+# Lands and nations can be in relations, such as ally, enemy and neutral.
 relations:
   # If you disable this option, all existing relations will be deleted.
   # NOTE: This setting requires server reload / restart.
   enabled_6: true
 
 
-# General options for economic tasks, that apply to taxes, upkeep and nation upkeep.
-# Each task has it's own section, in this file and nations.yml, with specified options.
-economic:
-  # Default configuration: taxes, upkeep and nation upkeep are collected every day at midnight.
-  interval:
-    # Collect taxes, upkeep and nation upkeep at midnight.
-    # Format: 24 hour format.
-    time: '24:00:00'
-    # Set amount of days between each payment.
-    # 1 doesn't have any effect. 2 would make it execute every second day at "time" (specified above).
-    # Example: 2 = executes every second day at the time specified at the top of this section.
-    days_2: 1
-    # Set the minimum time between a player's attempt to change the tax or upkeep and the next collection.
-    change-cooldown_time: 12h
-
-
-# Taxes settings
-# Taxes = Trusted players pay a defined amount of tax per defined interval.
-# Rent = The players can rent a area of their choice without needing to get trusted. They can decide how long they want to rent it.
-taxes:
-  # The interval can be configured in the "economic" section.
-  enabled_3: true
-  # Set the minimum tax value.
-  min_2: 0
-  # Set max tax value for a single area (if a land has no sub areas then this will be the default area)
-  max_3: 10.0
-  # Untrust a land member from the area if he couldn't pay the taxes?
-  untrust-member: true
-  # Announce upcoming tax payments to players.
-  # Default: Lands will sent a player every two hours a notice, if they don't have enough to pay their taxes.
-  # Disable: 0
-  taxes-announcement_time: 2h
-
-
-# Land upkeep costs
-# Upkeep = Lands pay a defined amount of money to the server in order to keep their claimed land.
-# Taxes = Trusted players pay a defined amount of tax per defined interval.
-upkeep:
-  # NOTE: This setting requires server reload / restart.
-  enabled_19: true
-  # How much should a land pay per chunk?
-  # NOTE: Final payment would be land size (chunks) * cost
-  per-chunk: 3.0
-  # Should the last claimed chunks, which the land could not pay for, be deleted?
-  # Example: The land has 10 claimed chunks, but it can pay the upkeep only for 6. So the 4 last claimed chunks will be deleted.
-  # This continues each upkeep cicle until no claims are left.
-  unclaim: false
-  # Exclude land from upkeep, if it was recently created?
-  # This will prevent recently created lands getting a chunk deleted, if the land owner / land bank doesn't have enough money (and if delete-chunk enabled).
-  # So only lands, which are older than x seconds, will need to pay this.
-  nopay_time: 2d
-  # Remind land members, which can deposit money into their lands, about upcoming upkeep payments until they have enough money to pay it.
-  # This helps your players lands keeping track of it and not loosing claims or their membership in the nation.
-  upkeep-reminder_time: 1h
-
-
-# Player settings
+# Players can toggle personal flags to customize their experience.
 player:
   flags:
     # Configure a default list of flags that is enabled.
@@ -563,18 +580,6 @@ player:
       - 'all'
 
 
-# General Teleportation Settings
-# Command specific teleportation options can be find in their sections.
-teleport:
-  # General teleportation cost. Some features might have specific options, which override this.
-  costs_9: 0
-  # Set the cost of any teleportation to 0 for players that joined the server for the first time.
-  # You can define a time span here. Example: 1d = players that joined the server 23 hours ago, won't pay for any teleportation.
-  first-join_time: 2h
-  # Waittime
-  # Timeunit: seconds
-  wait: 3
-
 # This is the configuration of the /lands unstuck command.
 # Purpose of this command is to let players be able to teleported out of locations in lands where they got trapped.
 # For example a player finds a way walking into a land, but can't find a way out.
@@ -583,8 +588,9 @@ unstuck:
   # Set the cooldown for this command.
   unstuck-cooldown_time: 1h
 
+
 # Random teleportation (/lands wild)
-# When using this make sure to set the worlds spawn with /setworldspawn
+# When using this make sure to set the spawn of each world using /setworldspawn.
 random-teleport:
   # Worlds where players should be able to use /lands wild.
   # You can use '*' as a entry, to allow all worlds.
@@ -630,6 +636,7 @@ introduction:
     # Will only be sent if the player isn't part of any land already.
     container-placement: true
 
+
 # Sound configuration
 # Format: SOUND:VOLUME:PITCH
 # The volume and pitch parameter are optional. They allow you to control how the sound is played.
@@ -658,8 +665,8 @@ sounds:
   fly-re-enable_sound: 'ITEM_ARMOR_EQUIP_ELYTRA'
 
 
-# Top 10 lands leaderboard settings
-# Includes /lands top, leaderboard signs and holograms
+# Top lands and nations leaderboard options
+# Includes /lands top, /nations top, leaderboard signs and holograms
 top-lands:
   # Should Lands divide the balance of the lands by 1000 and append "k" to it, if the balance is greater or equal to 1000?
   # NOTE: This also influences the "[...]_balance" papi placeholders.
@@ -684,7 +691,7 @@ top-lands:
     - '8667ba71-b85a-4004-af54-457a9734eed7'
 
 
-# Visualization settings
+# Visualization options for /lands view etc.
 visualization:
   type:
     # Wilderness
@@ -790,7 +797,7 @@ visualization:
     height_2: 10
 
 
-# Command settings
+# Command options
 command:
   # This is needed for time rewards and the "/lands player <player> give permission chunk" command
   permission-plugin:
@@ -828,7 +835,8 @@ command:
     # This affects all players, which are standing in a land.
     general_list: [ ]
 
-# Lands menu settings (/lands menu)
+
+# Lands menu options (/lands menu)
 gui:
   # Should Lands automatically adjust the length of item lore lines?
   # Recommended length is 35.
@@ -839,7 +847,7 @@ gui:
   list-only-public: false
 
 
-# Database settings
+# Database options
 database:
   # MySQL database
   # If MySQL and SQLite are disabled, Lands will use JSON filestorage instead.
@@ -877,10 +885,7 @@ database:
   error-disallow-join: true
 
 
-# Integration settings
-# Missing something? You can request a integration through pm or discord.
-# Resource page: https://www.spigotmc.org/resources/.53313
-# Discord: https://discord.gg/B4MAJVk
+# 3rd party plugin options
 integration:
   # Management integrations
   manager:
@@ -924,6 +929,8 @@ integration:
       # Not just items of the same type or items with the same model-data.
       strict: false
 
+
+# You most likely don't need to edit this section.
 entities:
   # You can specify here which entities should be considered an animal or monster.
   # This affects all parts of the plugin, that involves these entity groups.
