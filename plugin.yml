@@ -29,8 +29,6 @@ commands:
     description: 'Shortcut of /lands assign'
   unclaim:
     description: 'Shortcut of /lands unclaim'
-  unclaimall:
-    description: 'Shortcut of /lands unclaimall'
   edit:
     description: 'Shortcut of /lands edit'
   trust:
