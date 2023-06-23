@@ -1,3 +1,4 @@
++ Added: Folia support. The /lands wild support is not supported for folia right now and will be disabled on folia
 + Changed: /lands unclaimall is now /lands unclaim all
 - Fixed: [#2358] Pistons could move non solid blocks into claim
 - Fixed: [#2361] Players could activate tripwires even if redstone disallowed
