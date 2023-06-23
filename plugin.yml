@@ -6,6 +6,7 @@ description: 'Feature rich GUI, Taxes, Customize your own, Titles, New factions 
 website: 'https://www.spigotmc.org/resources/53313'
 api-version: '1.13'
 load: POSTWORLD
+folia-supported: true
 
 softdepend: [ Vault, dynmap, BlueMap, HolographicDisplays, CMI, WorldGuard, WorldEdit, PlaceholderAPI, MythicMobs, squaremap, UltraRegions, floodgate, Sentinel, MobHunting, Vehicles, Pl3xMap ]
 
